@@ -1,0 +1,29 @@
+# controller:
+#   replicaCount: 1
+
+#   service:
+#     type: LoadBalancer
+#     annotations:
+#       service.beta.kubernetes.io/aws-load-balancer-type: external
+#       service.beta.kubernetes.io/aws-load-balancer-scheme: internet-facing
+
+#   tolerations:
+#     - key: "workload"
+#       operator: "Exists"
+#       effect: "NoSchedule"
+
+#   nodeSelector:
+#     kubernetes.io/os: linux
+
+# admissionWebhooks:
+#   patch:
+#     tolerations:
+#       - key: "workload"
+#         operator: "Exists"
+#         effect: "NoSchedule"
+
+#   create:
+#     tolerations:
+#       - key: "workload"
+#         operator: "Exists"
+#         effect: "NoSchedule"
